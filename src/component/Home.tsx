@@ -86,7 +86,7 @@ return(
     <div className="bg-white rounded-md">
       <div className="relative bg-white rounded-lg ">
         <button onClick={() => setShowModal(false) }type="button" className="bg-[#FCCC37] absolute top-3 right-2.5 text-white-600 hover:text-gray-900 rounded-full text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white" data-modal-hide="authentication-modal">
-          <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <svg className="w-5 h-5" fill="#FFFFFF" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
             <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd"></path>
           </svg>
           <span className="sr-only">Close modal</span>
@@ -94,7 +94,7 @@ return(
         <div className=" px-6 py-6 lg:px-8">
           <h3 className="text-xl font-medium text-title dark:text-white">Demande de certification</h3>
           <form onSubmit={handleSubmit} className="space-y-6" action="#">
-            <div className=" flex justify-self-stretch justify-between  flex-row">
+            <div className=" grid grid-cols-2 gap-4 ">
             <FormInput name='nom' label='Votre nom' type ='text' onChange={handleInputChange}/>
             <FormInput name='prenom' label='Votre prenom' type ='text' onChange={handleInputChange}/>
             </div>

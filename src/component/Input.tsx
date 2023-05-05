@@ -4,6 +4,7 @@ type Props ={
     name:string;
     label:string;
     type:string;
+    // myStyle: string|null;
     onChange: (event: React.ChangeEvent<HTMLInputElement | HTMLInputElement>) => void
 } 
 
