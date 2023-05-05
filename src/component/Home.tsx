@@ -58,7 +58,7 @@ const Home : React.FC = () => {
 
 return(
   <><div className="bg-gray-100 h-screen flex items-center justify-center">
-  <div className="flex flex-col justify-center  bg-white p-6 rounded-lg shadow-lg">
+  <div className="flex flex-col justify-center  bg-white p-6 rounded-lg ">
     <h1 className="text-2xl font-bold mb-4">Welcome to my website!</h1>
     <button onClick={() => setShowModal(true)} className=" flex justify-center items-center bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
       Form
@@ -83,8 +83,8 @@ return(
       border: 'none',
     },
   }}>
-    <div className="bg-white rounded-md shadow-md">
-      <div className="relative bg-white rounded-lg shadow dark:bg-gray-700">
+    <div className="bg-white rounded-md">
+      <div className="relative bg-white rounded-lg ">
         <button onClick={() => setShowModal(false) }type="button" className="bg-[#FCCC37] absolute top-3 right-2.5 text-white-600 hover:text-gray-900 rounded-full text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white" data-modal-hide="authentication-modal">
           <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
             <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd"></path>
