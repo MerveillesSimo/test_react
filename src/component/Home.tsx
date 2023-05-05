@@ -68,7 +68,7 @@ return(
 <Modal isOpen={showModal} onRequestClose={() => setShowModal(false)}
   style={{
     overlay: {
-      backgroundColor: 'rgba(0, 0, 0, 0.0)', // rendre l'arrière-plan transparent
+      backgroundColor: 'rgba(0, 0, 0, 0.2)', // rendre l'arrière-plan transparent
     },
     content: {
       maxWidth: '1000px',
@@ -83,7 +83,7 @@ return(
       border: 'none',
     },
   }}>
-    <div className="bg-white mt-4 rounded-md shadow-md">
+    <div className="bg-white rounded-md shadow-md">
       <div className="relative bg-white rounded-lg shadow dark:bg-gray-700">
         <button onClick={() => setShowModal(false) }type="button" className="bg-[#FCCC37] absolute top-3 right-2.5 text-white-600 hover:text-gray-900 rounded-full text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white" data-modal-hide="authentication-modal">
           <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -91,7 +91,7 @@ return(
           </svg>
           <span className="sr-only">Close modal</span>
         </button>
-        <div className="px-6 py-6 lg:px-8">
+        <div className=" px-6 py-6 lg:px-8">
           <h3 className="text-xl font-medium text-title dark:text-white">Demande de certification</h3>
           <form onSubmit={handleSubmit} className="space-y-6" action="#">
             <div className=" flex justify-self-stretch justify-between  flex-row">
