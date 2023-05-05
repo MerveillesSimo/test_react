@@ -1,8 +1,7 @@
 import React from 'react';
-import Form from './Form';
 import Modal from 'react-modal'
 import FormInput from './Input';
-
+import {MyRequest} from '../services/requete';
 
 
 interface FormData {
@@ -18,6 +17,7 @@ interface FormData {
 const Home : React.FC = () => {
   const [showModal, setShowModal] = React.useState(false);
   const [submit,setSubmit] = React.useState(false);
+  const[result,setResult] =React.useState({})
   const [formData, setFormData] = React.useState<FormData>({
     nom: '',
     prenom: '',
@@ -45,16 +45,22 @@ const Home : React.FC = () => {
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    console.log(formData);
-    setSubmit(true)
+    setSubmit(true) 
+    MyRequest(formData).then(myResult =>{ 
+      setResult(myResult)
+      setSubmit(false) 
+      setShowModal(false)
+    })
+    .catch(error => console.log('error', error));
+    console.log(result);
     // You can submit the form data to a server or perform other actions here
   };
 
 return(
   <><div className="bg-gray-100 h-screen flex items-center justify-center">
-  <div className="bg-white p-6 rounded-lg shadow-lg">
+  <div className="flex flex-col justify-center  bg-white p-6 rounded-lg shadow-lg">
     <h1 className="text-2xl font-bold mb-4">Welcome to my website!</h1>
-    <button onClick={() => setShowModal(true)} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded flex justify-center">
+    <button onClick={() => setShowModal(true)} className=" flex justify-center items-center bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
       Form
     </button>
   </div>
